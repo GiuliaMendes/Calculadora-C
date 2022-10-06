@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int calculo;
+    float n1, n2, resultado;
+    
+    printf("Giulia Vitória Da Silveira Mendes\nAnálise e Desenvolvimento de Sistemas\nUniversidade La Salle\nMatrícula 202211031\n\n");
+    
+    printf("Calculadora em C:\n\n");
+    
+    printf("Selecione o cálculo que deseja fazer:\n");
+    
+    printf("1. Adição\n2. Subtração\n3. Divisão\n4. Multiplicação\n5. Raiz quadrada\n6. Potência\n\n");
+    scanf("%d", &calculo);
+    
+    if (calculo == 6)
+    {
+        printf("\nDigite a base da potenciação: ");
+        scanf("%f", &n1);
+        printf("\nDigite o expoente da potenciação ");
+        scanf("%f", &n2);
+    }
+    else if (calculo == 5)
+    {
+        printf("\nDigite o valor a ser usado na raiz quadrada: ");
+        scanf("%f", &n1);
+    }
+    else
+    {
+        printf("\nEscolha o primeiro valor para o cálculo: ");
+        scanf("%f", &n1);
+        printf("\nEscolha o segundo valor para o cálculo: ");
+        scanf("%f", &n2);
+    }
+    
+    switch(calculo)
+    {
+        case 1:
+            resultado = n1+n2;
+            break;
+        case 2:
+            resultado = n1-n2;
+            break;
+        case 3:
+            resultado = n1/n2;
+            break;
+        case 4:
+            resultado = n1*n2;
+            break;
+        case 5:
+            resultado = sqrt(n1);
+            break;
+        case 6:
+            resultado = pow(n1, n2);
+            break;
+    }
+    
+    printf("\nO resultado do cálculo é: %f", resultado);
+  return 0;
+}
